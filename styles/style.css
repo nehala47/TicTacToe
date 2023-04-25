@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700&display=swap');
+
+@keyframes example {
+    from {
+        font-size: 15rem;
+    }
+
+    to {
+        font-size: 20rem;
+    }
+}
+
+@keyframes btnAnimation {
+    from {
+        background-color: red;
+        color: whitesmoke;
+    }
+
+    to {
+        background-color: white;
+        color: blue;
+    }
+}
+
+
+* {
+    font-family: 'Nunito', sans-serif;
+    background-color: black;
+}
+
+body {
+    position: relative;
+}
+
+#txtChoose {
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnX,
+#btnO {
+    color: #A90D0D;
+    font-weight: bold;
+    font-size: 15rem;
+    display: inline-block;
+    padding: 2rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+#btnX:hover,
+#btnO:hover {
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+#box {
+    display: none;
+    margin: 0 auto;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 500px;
+}
+
+.space {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 1;
+    border: 1px solid whitesmoke;
+    min-width: 150px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+button {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 1px;
+    padding: 1rem;
+    background-color: red;
+    color: whitesmoke;
+    font-size: 2rem;
+    border: 1px solid black;
+}
+
+button:hover {
+    animation-name: btnAnimation;
+    animation-duration: 2s;
+}
+
